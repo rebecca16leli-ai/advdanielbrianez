@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel Brianez Advocacia | Direito Previdenciário em Londrina</title>
+<meta name="description" content="Advocacia previdenciária com mais de 20 anos de experiência. Aposentadorias, benefícios e revisões. Fale agora pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0D1B33;
+    --navy-mid:#1B3A63;
+    --navy-mid2:#254a7a;
+    --gold:#BD8C1B;
+    --gold-light:#D9AE4E;
+    --wa-green:#25D366;
+    --wa-green-dark:#1DA851;
+    --cream:#F6F2E9;
+    --paper:#FFFFFF;
+    --ink:#1B1B1B;
+    --ink-soft:#4a4a4a;
+    --shield: polygon(0% 0%, 100% 0%, 100% 68%, 50% 100%, 0% 68%);
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Lato', sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit; text-decoration:none;}
+  h1,h2,h3{font-family:'Playfair Display', serif; font-weight:600; line-height:1.15;}
+  .container{max-width:1140px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'Lato',sans-serif; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    font-size:.78rem; color:var(--gold);
+  }
+  section{padding:96px 0;}
+  @media (max-width:720px){ section{padding:64px 0;} }
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:100;
+    background:rgba(13,27,51,0.92);
+    backdrop-filter:blur(6px);
+    transition:padding .25s ease;
+  }
+  .header-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:1140px; margin:0 auto; padding:14px 24px; gap:20px;
+  }
+  .brand{display:flex; align-items:center; gap:12px;}
+  .brand img{height:42px; width:auto;}
+  .brand-text{font-family:'Playfair Display',serif; color:var(--paper); font-size:1.05rem; line-height:1.2;}
+  .brand-text span{display:block; font-family:'Playfair Display',serif; font-style:italic; color:var(--gold-light); font-size:.78rem; font-weight:500;}
+  .nav-links{display:flex; align-items:center; gap:30px; margin-left:auto;}
+  .nav-links a{
+    color:#c9d2e0; font-size:.88rem; font-weight:700; letter-spacing:.02em;
+    position:relative; padding:4px 0; transition:color .2s ease;
+  }
+  .nav-links a::after{
+    content:""; position:absolute; left:0; bottom:-2px; width:0; height:2px;
+    background:var(--gold); transition:width .25s ease;
+  }
+  .nav-links a:hover{color:var(--paper);}
+  .nav-links a:hover::after{width:100%;}
+  @media (max-width:760px){ .nav-links{display:none;} }
+  .header-cta{
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--wa-green); color:#fff; font-weight:700;
+    padding:11px 20px; border-radius:3px; font-size:.88rem;
+    letter-spacing:.02em; transition:background .2s ease, transform .2s ease, box-shadow .2s ease;
+    flex:none;
+  }
+  .header-cta:hover{background:var(--wa-green-dark); transform:translateY(-2px); box-shadow:0 10px 22px -8px rgba(37,211,102,.6);}
+  .header-cta:active{transform:translateY(0); box-shadow:none;}
+  .header-cta svg{width:16px; height:16px; fill:#fff; transition:transform .2s ease;}
+  .header-cta:hover svg{transform:rotate(-8deg) scale(1.1);}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position:relative;
+    background:
+      linear-gradient(90deg, rgba(9,17,33,0.95) 0%, rgba(9,17,33,0.88) 40%, rgba(10,20,40,0.55) 62%, rgba(10,20,40,0.22) 85%, rgba(10,20,40,0.1) 100%),
+      url('img/hero_portrait.jpg') center 38% / cover no-repeat;
+    color:var(--paper);
+    padding:190px 0 130px;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1fr; gap:0; align-items:center;
+  }
+  .hero-content{max-width:600px;}
+  .hero h1{font-size:2.9rem; color:var(--paper); margin-bottom:22px;}
+  .hero h1 em{font-style:italic; color:var(--gold-light);}
+  @media (max-width:720px){ .hero h1{font-size:2.1rem;} .hero{padding:150px 0 90px;} }
+  .hero p.lead{font-size:1.14rem; color:#dbe1ea; max-width:520px; margin-bottom:34px; font-weight:300;}
+  .btn-primary{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--wa-green); color:#fff; font-weight:700; font-size:1rem;
+    padding:17px 30px; border-radius:3px; box-shadow:0 10px 30px -8px rgba(37,211,102,.5);
+    transition:transform .2s cubic-bezier(.34,1.56,.64,1), box-shadow .2s ease, background .2s ease;
+  }
+  .btn-primary:hover{transform:translateY(-3px) scale(1.03); background:var(--wa-green-dark); box-shadow:0 16px 34px -8px rgba(37,211,102,.65);}
+  .btn-primary:active{transform:translateY(-1px) scale(1);}
+  .btn-primary svg{width:20px; height:20px; fill:#fff; transition:transform .35s ease;}
+  .btn-primary:hover svg{transform:rotate(12deg) scale(1.12);}
+  .hero-note{margin-top:18px; font-size:.85rem; color:#c3ccd9; letter-spacing:.02em;}
+  .hero-note::first-letter{color:var(--wa-green);}
+  .hero-signature{display:flex; align-items:center; gap:14px; margin-top:32px; padding-top:28px; border-top:1px solid rgba(255,255,255,.14);}
+  .hero-signature img{width:52px; height:52px; border-radius:50%; object-fit:cover; border:2px solid var(--gold); flex:none;}
+  .hero-signature strong{display:block; font-family:'Playfair Display',serif; font-size:1rem; color:var(--paper); font-weight:600;}
+  .hero-signature span{font-size:.82rem; color:#a9b6c8;}
+
+  .hero-badge{
+    background:var(--paper); color:var(--navy-deep); text-align:center;
+    padding:16px 30px; border-radius:3px; box-shadow:0 20px 40px -12px rgba(0,0,0,.55);
+    min-width:210px;
+  }
+  .hero-badge-float{
+    position:absolute; right:24px; bottom:56px; z-index:2;
+  }
+  @media (max-width:860px){
+    .hero-badge-float{position:static; margin:40px auto 0; width:fit-content;}
+  }
+  .hero-badge strong{display:block; font-family:'Playfair Display',serif; font-size:1.6rem; color:var(--navy-deep);}
+  .hero-badge span{font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--gold); font-weight:700;}
+
+  /* ---------- Sobre ---------- */
+  .sobre{background:var(--cream);}
+  .sobre-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center;}
+  @media (max-width:860px){ .sobre-grid{grid-template-columns:1fr; gap:40px;} }
+  .sobre-photo{
+    clip-path:var(--shield); height:480px; background:var(--navy-deep) url('img/office_wide.jpg') no-repeat;
+    background-size:160%; background-position:38% 42%;
+  }
+  @media (max-width:400px){ .sobre-photo{height:400px;} }
+  .sobre h2{font-size:2.1rem; color:var(--navy-deep); margin:10px 0 22px;}
+  .sobre p{color:var(--ink-soft); margin-bottom:16px; font-size:1.02rem;}
+  .sobre strong{color:var(--navy-deep);}
+  .credentials{display:flex; gap:34px; margin-top:30px; flex-wrap:wrap;}
+  .credentials div strong{display:block; font-family:'Playfair Display',serif; font-size:1.7rem; color:var(--navy-deep);}
+  .credentials div span{font-size:.78rem; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.06em;}
+
+  /* ---------- Áreas ---------- */
+  .areas{background:var(--paper);}
+  .areas-head{text-align:center; max-width:640px; margin:0 auto 56px;}
+  .areas-head h2{font-size:2.1rem; color:var(--navy-deep); margin-top:10px;}
+  .areas-head p{color:var(--ink-soft); margin-top:14px;}
+  .areas-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#e4ddd0; border:1px solid #e4ddd0;}
+  @media (max-width:820px){ .areas-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:520px){ .areas-grid{grid-template-columns:1fr;} }
+  .area-item{
+    background:var(--paper); padding:28px 26px; display:flex; align-items:flex-start; gap:14px;
+    transition:background .2s ease;
+  }
+  .area-item:hover{background:var(--cream);}
+  .area-item .dot{width:8px; height:8px; margin-top:8px; flex:none; background:var(--gold); clip-path:var(--shield); transition:transform .25s ease;}
+  .area-item:hover .dot{transform:scale(1.6);}
+  .area-item span{font-size:.98rem; font-weight:700; color:var(--navy-deep); letter-spacing:.01em; transition:color .2s ease;}
+  .area-item:hover span{color:var(--gold);}
+
+  /* ---------- Ticker ---------- */
+  .ticker{
+    background:var(--gold); overflow:hidden; white-space:nowrap; position:relative;
+    padding:14px 0; border-top:1px solid rgba(0,0,0,.1); border-bottom:1px solid rgba(0,0,0,.1);
+  }
+  .ticker-track{display:inline-flex; align-items:center; animation:ticker-scroll 34s linear infinite;}
+  .ticker-track span{
+    font-family:'Playfair Display',serif; font-weight:600; font-style:italic; font-size:1rem;
+    color:var(--navy-deep); padding:0 28px; flex:none;
+  }
+  .ticker-track span::after{content:"\2022"; margin-left:28px; color:var(--navy-deep); opacity:.5;}
+  @keyframes ticker-scroll{ from{transform:translateX(0);} to{transform:translateX(-50%);} }
+
+  /* ---------- FAQ ---------- */
+  .faq{background:var(--cream);}
+  .faq-head{text-align:center; max-width:640px; margin:0 auto 48px;}
+  .faq-head h2{font-size:2.1rem; color:var(--navy-deep); margin-top:10px;}
+  .faq-list{max-width:800px; margin:0 auto;}
+  .faq-item{
+    background:var(--paper); border:1px solid #ece6d8; border-radius:4px;
+    margin-bottom:14px; overflow:hidden;
+  }
+  .faq-item summary{
+    list-style:none; cursor:pointer; padding:22px 26px; display:flex;
+    align-items:center; justify-content:space-between; gap:16px;
+    font-family:'Playfair Display',serif; font-weight:600; font-size:1.05rem; color:var(--navy-deep);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{
+    flex:none; width:26px; height:26px; border-radius:50%; background:var(--cream);
+    display:flex; align-items:center; justify-content:center; position:relative; transition:background .2s ease, transform .3s ease;
+  }
+  .faq-item summary .plus::before, .faq-item summary .plus::after{
+    content:""; position:absolute; background:var(--gold); transition:transform .3s ease;
+  }
+  .faq-item summary .plus::before{width:12px; height:2px;}
+  .faq-item summary .plus::after{width:2px; height:12px;}
+  .faq-item[open] summary .plus{background:var(--gold); transform:rotate(180deg);}
+  .faq-item[open] summary .plus::before, .faq-item[open] summary .plus::after{background:var(--navy-deep);}
+  .faq-item[open] summary .plus::after{transform:scaleY(0);}
+  .faq-item p{padding:0 26px 24px; color:var(--ink-soft); font-size:.96rem; max-width:680px;}
+  .porque{
+    position:relative; overflow:hidden;
+    background:
+      linear-gradient(rgba(9,17,33,0.94), rgba(9,17,33,0.94)),
+      url('img/gavel.jpg') center 40% / cover no-repeat,
+      var(--navy-deep);
+  }
+  .porque-head{text-align:center; max-width:640px; margin:0 auto 56px; position:relative; z-index:1;}
+  .porque-head h2{font-size:2.1rem; color:var(--paper); margin-top:10px;}
+  .porque-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:28px; position:relative; z-index:1;}
+  @media (max-width:920px){ .porque-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .porque-grid{grid-template-columns:1fr;} }
+  .porque-card{text-align:center; padding:30px 20px; border:1px solid rgba(255,255,255,.1); border-radius:4px; transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; background:rgba(255,255,255,.03);}
+  .porque-card:hover{transform:translateY(-6px); box-shadow:0 20px 40px -18px rgba(0,0,0,.5); border-color:var(--gold);}
+  .porque-icon{
+    width:56px; height:56px; margin:0 auto 18px; border-radius:50%;
+    background:rgba(255,255,255,.06); display:flex; align-items:center; justify-content:center;
+    transition:background .25s ease;
+  }
+  .porque-card:hover .porque-icon{background:var(--gold);}
+  .porque-icon svg{width:26px; height:26px; stroke:var(--gold-light); fill:none; stroke-width:1.6; transition:stroke .25s ease;}
+  .porque-card:hover .porque-icon svg{stroke:var(--navy-deep);}
+  .porque-card h3{font-size:1.05rem; color:var(--paper); margin-bottom:10px; font-weight:600;}
+  .porque-card p{font-size:.9rem; color:#a9b6c8;}
+  .porque-watermark{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:900px; height:1080px; opacity:.035; clip-path:var(--shield);
+    background:var(--gold); pointer-events:none;
+  }
+
+  /* ---------- Google Reviews ---------- */
+  .reviews{background:var(--cream);}
+  .reviews-head{text-align:center; max-width:640px; margin:0 auto 20px;}
+  .reviews-head h2{font-size:2.1rem; color:var(--navy-deep); margin-top:10px;}
+  .google-badge{
+    display:inline-flex; align-items:center; gap:12px; background:var(--paper);
+    padding:14px 26px; border-radius:40px; box-shadow:0 10px 26px -14px rgba(13,27,51,.3);
+    margin:18px auto 50px; border:1px solid #ece6d8;
+  }
+  .google-badge svg{width:22px; height:22px; flex:none;}
+  .google-badge .stars{color:var(--gold); font-size:1rem; letter-spacing:2px;}
+  .google-badge strong{color:var(--navy-deep); font-family:'Playfair Display',serif; font-size:1.1rem;}
+  .google-badge span.count{color:var(--ink-soft); font-size:.85rem;}
+  .reviews-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  @media (max-width:920px){ .reviews-grid{grid-template-columns:1fr;} }
+  .review-card{
+    background:var(--paper); padding:30px 28px; border-radius:4px; border:1px solid #ece6d8;
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .review-card .stars{color:var(--gold); font-size:.95rem; letter-spacing:2px;}
+  .review-card p{color:var(--ink-soft); font-size:.94rem; flex:1;}
+  .review-card footer{display:flex; align-items:center; gap:10px;}
+  .review-avatar{
+    width:36px; height:36px; border-radius:50%; background:var(--navy-deep); color:var(--gold-light);
+    display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:600; flex:none;
+  }
+  .review-name{font-size:.86rem; font-weight:700; color:var(--navy-deep);}
+  .review-source{font-size:.72rem; color:var(--ink-soft); display:flex; align-items:center; gap:4px;}
+  .reviews-cta{text-align:center; margin-top:44px;}
+  .reviews-cta a{
+    display:inline-flex; align-items:center; gap:8px; color:var(--navy-deep); font-weight:700; font-size:.92rem;
+    border-bottom:2px solid var(--gold); padding-bottom:3px; transition:color .2s ease, border-color .2s ease;
+  }
+  .reviews-cta a:hover{color:var(--gold);}
+  #featurable-container{margin-top:40px; min-height:80px;}
+  #trustindex-reviews{margin-top:40px; min-height:60px;}
+
+
+  /* ---------- CTA final ---------- */
+  .cta-final{background:var(--navy-deep); padding:90px 0 130px; position:relative;}
+  .cta-card{
+    max-width:640px; margin:0 auto; background:var(--paper); border-radius:6px;
+    padding:52px 44px; text-align:center; box-shadow:0 30px 70px -20px rgba(0,0,0,.5);
+    position:relative; z-index:2;
+  }
+  .cta-icon{
+    width:64px; height:64px; border-radius:50%; background:var(--wa-green); margin:-96px auto 24px;
+    display:flex; align-items:center; justify-content:center; box-shadow:0 14px 30px -8px rgba(37,211,102,.55);
+  }
+  .cta-icon svg{width:30px; height:30px; fill:#fff;}
+  .cta-card p.eyebrow{justify-content:center; display:flex;}
+  .cta-card h2{font-size:1.9rem; color:var(--navy-deep); margin:12px 0 14px;}
+  .cta-card p.sub{color:var(--ink-soft); max-width:440px; margin:0 auto 30px; font-size:.98rem;}
+
+  /* ---------- Footer ---------- */
+  footer.site-footer{background:var(--navy-deep); padding:70px 0 28px;}
+  .footer-grid{display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:48px; padding-bottom:44px; border-bottom:1px solid rgba(255,255,255,.1);}
+  @media (max-width:820px){ .footer-grid{grid-template-columns:1fr; gap:36px;} }
+  .footer-brand img{height:38px; margin-bottom:16px;}
+  .footer-brand p{color:#9aa5b8; font-size:.9rem; max-width:320px; line-height:1.7;}
+  .footer-col h4{color:var(--gold-light); font-family:'Lato',sans-serif; font-size:.78rem; letter-spacing:.1em; text-transform:uppercase; margin-bottom:18px; font-weight:700;}
+  .footer-col a, .footer-col p{display:flex; align-items:flex-start; gap:10px; color:#c9d2e0; font-size:.9rem; margin-bottom:14px; line-height:1.5; transition:color .2s ease;}
+  .footer-col a:hover{color:var(--gold-light);}
+  .footer-col svg{width:16px; height:16px; flex:none; margin-top:2px; stroke:var(--gold); fill:none; stroke-width:1.6;}
+  .footer-map{border-radius:4px; overflow:hidden; border:1px solid rgba(255,255,255,.12); height:170px;}
+  .footer-map iframe{width:100%; height:100%; border:0; filter:grayscale(.3) invert(.92) contrast(.9);}
+  .footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding-top:26px;}
+  .footer-inner p{color:#8b96a8; font-size:.8rem;}
+  .footer-social{display:flex; gap:12px;}
+  .footer-social a{
+    width:34px; height:34px; border-radius:50%; border:1px solid rgba(255,255,255,.18);
+    display:flex; align-items:center; justify-content:center; transition:background .2s ease, border-color .2s ease;
+  }
+  .footer-social a:hover{background:var(--gold); border-color:var(--gold);}
+  .footer-social svg{width:15px; height:15px; fill:#c9d2e0; transition:fill .2s ease;}
+  .footer-social a:hover svg{fill:var(--navy-deep);}
+
+  /* ---------- Floating WhatsApp ---------- */
+  .float-wa{
+    position:fixed; bottom:22px; right:22px; z-index:200;
+    width:60px; height:60px; border-radius:50%;
+    background:var(--wa-green); display:flex; align-items:center; justify-content:center;
+    box-shadow:0 10px 26px -6px rgba(0,0,0,.5);
+    transition:transform .2s ease, box-shadow .2s ease;
+    animation:wa-pulse 2.6s ease-in-out infinite;
+  }
+  .float-wa::before{
+    content:""; position:absolute; inset:0; border-radius:50%;
+    border:2px solid var(--wa-green); animation:wa-ring 2.6s ease-out infinite;
+  }
+  .float-wa:hover{transform:scale(1.08); box-shadow:0 14px 30px -6px rgba(0,0,0,.6);}
+  .float-wa:active{transform:scale(.96);}
+  .float-wa svg{width:30px; height:30px; fill:#fff;}
+  @keyframes wa-pulse{
+    0%,100%{box-shadow:0 10px 26px -6px rgba(0,0,0,.5), 0 0 0 0 rgba(37,211,102,.5);}
+    50%{box-shadow:0 10px 26px -6px rgba(0,0,0,.5), 0 0 0 10px rgba(37,211,102,0);}
+  }
+  @keyframes wa-ring{
+    0%{opacity:.6; transform:scale(1);}
+    100%{opacity:0; transform:scale(1.5);}
+  }
+  .wa-bubble{
+    position:fixed; bottom:34px; right:92px; z-index:199;
+    background:#fff; color:var(--navy-deep); padding:13px 18px; border-radius:10px;
+    box-shadow:0 14px 34px -10px rgba(0,0,0,.35); max-width:220px; font-size:.9rem; font-weight:700;
+    line-height:1.35; opacity:0; transform:translateY(8px) scale(.96);
+    animation:wa-bubble-in .5s ease forwards; animation-delay:2.2s;
+  }
+  .wa-bubble::after{
+    content:""; position:absolute; right:-7px; bottom:20px; width:14px; height:14px;
+    background:#fff; transform:rotate(45deg); border-radius:2px;
+  }
+  .wa-bubble button{
+    position:absolute; top:-8px; right:-8px; width:22px; height:22px; border-radius:50%;
+    background:var(--navy-deep); color:#fff; border:2px solid #fff; font-size:.7rem; line-height:1;
+    cursor:pointer; display:flex; align-items:center; justify-content:center;
+  }
+  @keyframes wa-bubble-in{ to{opacity:1; transform:translateY(0) scale(1);} }
+  @media (max-width:480px){
+    .wa-bubble{right:20px; bottom:92px; max-width:200px;}
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{transition:none !important; animation:none !important;}
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1);}
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  .reveal-stagger.is-visible .porque-card,
+  .reveal-stagger.is-visible .review-card,
+  .reveal-stagger.is-visible .area-item{opacity:1; transform:translateY(0);}
+  .reveal-stagger .porque-card,
+  .reveal-stagger .review-card,
+  .reveal-stagger .area-item{opacity:0; transform:translateY(20px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal-stagger.is-visible .porque-card:nth-child(1),.reveal-stagger.is-visible .review-card:nth-child(1),.reveal-stagger.is-visible .area-item:nth-child(1){transition-delay:.05s;}
+  .reveal-stagger.is-visible .porque-card:nth-child(2),.reveal-stagger.is-visible .review-card:nth-child(2),.reveal-stagger.is-visible .area-item:nth-child(2){transition-delay:.12s;}
+  .reveal-stagger.is-visible .porque-card:nth-child(3),.reveal-stagger.is-visible .review-card:nth-child(3),.reveal-stagger.is-visible .area-item:nth-child(3){transition-delay:.19s;}
+  .reveal-stagger.is-visible .porque-card:nth-child(4),.reveal-stagger.is-visible .area-item:nth-child(4){transition-delay:.26s;}
+  .reveal-stagger.is-visible .area-item:nth-child(5){transition-delay:.32s;}
+  .reveal-stagger.is-visible .area-item:nth-child(6){transition-delay:.38s;}
+  .reveal-stagger.is-visible .area-item:nth-child(7){transition-delay:.44s;}
+  .reveal-stagger.is-visible .area-item:nth-child(8){transition-delay:.5s;}
+  .reveal-stagger.is-visible .area-item:nth-child(9){transition-delay:.56s;}
+  .reveal-stagger.is-visible .area-item:nth-child(10){transition-delay:.62s;}
+  .reveal-stagger.is-visible .area-item:nth-child(11){transition-delay:.68s;}
+  .reveal-stagger.is-visible .area-item:nth-child(12){transition-delay:.74s;}
+  @media (prefers-reduced-motion: reduce){
+    .reveal, .reveal-stagger .porque-card, .reveal-stagger .review-card, .reveal-stagger .area-item{opacity:1 !important; transform:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="brand">
+      <img src="img/crest_only.png" alt="Brasão Daniel Brianez Advocacia">
+      <div class="brand-text">Daniel Brianez<span>Advocacia Previdenciária</span></div>
+    </div>
+    <nav class="nav-links">
+      <a href="#sobre">Sobre</a>
+      <a href="#areas">Áreas de Atuação</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#depoimentos">Depoimentos</a>
+    </nav>
+    <a class="header-cta" href="https://wa.me/554384095144?text=Ol%C3%A1%2C%20Dr.%20Daniel%2C%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>
+      Fale agora
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <p class="eyebrow">Direito Previdenciário &middot; Londrina/PR</p>
+      <h1>A justiça que transforma vidas <em>começa por um diálogo.</em></h1>
+      <p class="lead">Mais de 20 anos ajudando pessoas a conquistar o benefício que é seu por direito. Converse agora com o Dr. Daniel Brianez, sem burocracia.</p>
+      <a class="btn-primary" href="https://wa.me/554384095144?text=Ol%C3%A1%2C%20Dr.%20Daniel%2C%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>
+        Contar meu caso agora
+      </a>
+      <p class="hero-note">&#9679; Conversa 100% gratuita, sem compromisso &middot; Você fala direto comigo</p>
+      <div class="hero-signature">
+        <img src="img/desk_portrait.jpg" alt="Dr. Daniel Brianez" style="object-position:38% 30%;">
+        <div>
+          <strong>Dr. Daniel Brianez</strong>
+          <span>Advogado Previdenciário &middot; atendimento direto, sem intermediários</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-badge hero-badge-float reveal">
+    <strong data-count="4000" data-prefix="+">+4.000</strong>
+    <span>Processos conduzidos</span>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>Aposentadoria por Idade</span><span>Aposentadoria por Invalidez</span><span>Auxílio-Doença</span><span>Benefício Assistencial (LOAS)</span><span>Pensão por Morte</span><span>Aposentadoria Especial</span><span>Salário-Maternidade</span><span>Revisão de Benefícios</span>
+    <span>Aposentadoria por Idade</span><span>Aposentadoria por Invalidez</span><span>Auxílio-Doença</span><span>Benefício Assistencial (LOAS)</span><span>Pensão por Morte</span><span>Aposentadoria Especial</span><span>Salário-Maternidade</span><span>Revisão de Benefícios</span>
+  </div>
+</div>
+
+<section class="sobre" id="sobre">
+  <div class="container sobre-grid reveal">
+    <div class="sobre-photo" role="img" aria-label="Escritório de advocacia de Daniel Brianez"></div>
+    <div>
+      <p class="eyebrow">Quem cuida do seu caso</p>
+      <h2>Experiência que defende, empatia que acolhe.</h2>
+      <p>Sou bacharel em Direito pela <strong>Universidade Estadual de Londrina (UEL)</strong> e atuo há mais de <strong>20 anos como advogado especializado em Direito Previdenciário</strong>.</p>
+      <p>Ao longo da minha trajetória, conduzi mais de <strong>4.000 processos</strong>, sempre com o mesmo propósito: proteger quem dedicou a vida ao trabalho e agora busca o amparo da lei.</p>
+      <p>Acredito que o Direito deve ser humano, acessível e transparente — por isso, acompanho pessoalmente cada etapa do processo, para que você se sinta amparado do início ao fim.</p>
+      <div class="credentials">
+        <div><strong data-count="20" data-suffix="+">20+</strong><span>Anos de atuação</span></div>
+        <div><strong data-count="4000" data-suffix="+">4.000+</strong><span>Processos conduzidos</span></div>
+        <div><strong>UEL</strong><span>Formação em Direito</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="areas">
+  <div class="container">
+    <div class="areas-head reveal">
+      <p class="eyebrow">Áreas de atuação</p>
+      <h2>Como posso ajudar você</h2>
+      <p>Se você se encaixa em uma das situações abaixo, converse comigo — pode haver um benefício ao qual você tem direito.</p>
+    </div>
+    <div class="areas-grid reveal-stagger">
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria por Idade Urbana</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria por Idade Rural</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria por Idade Híbrida</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria por Tempo de Contribuição</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria Especial</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria por Invalidez</span></div>
+      <div class="area-item"><span class="dot"></span><span>Aposentadoria da Pessoa com Deficiência</span></div>
+      <div class="area-item"><span class="dot"></span><span>Auxílio-Doença</span></div>
+      <div class="area-item"><span class="dot"></span><span>Auxílio-Acidente</span></div>
+      <div class="area-item"><span class="dot"></span><span>Benefício Assistencial (LOAS)</span></div>
+      <div class="area-item"><span class="dot"></span><span>Salário-Maternidade</span></div>
+      <div class="area-item"><span class="dot"></span><span>Pensão por Morte</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="duvidas">
+  <div class="container">
+    <div class="faq-head reveal">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Dúvidas sobre o seu benefício</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary>Como sei se tenho direito a algum benefício do INSS?<span class="plus"></span></summary>
+        <p>É mais comum do que parece: muita gente tem direito e não sabe. O jeito mais fácil é me contar sua situação pelo WhatsApp — idade, tempo de trabalho, se tem alguma doença ou dificuldade — e eu te digo se há um benefício possível, sem compromisso.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo demora um processo de aposentadoria ou benefício?<span class="plus"></span></summary>
+        <p>Varia de caso a caso e depende do INSS, mas em geral fica entre alguns meses a pouco mais de um ano. Eu acompanho cada etapa e te aviso sempre que houver novidade, para você não ficar no escuro esperando.</p>
+      </details>
+      <details class="faq-item">
+        <summary>O INSS negou meu pedido. Ainda posso fazer alguma coisa?<span class="plus"></span></summary>
+        <p>Sim, e isso acontece com muita frequência, inclusive por erros do próprio INSS. Existe prazo para recorrer, então quanto antes você me procurar, melhor. Já revertemos diversos indeferimentos ao longo desses 20 anos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Preciso ir até o escritório pessoalmente?<span class="plus"></span></summary>
+        <p>Não necessariamente. Muita coisa pode ser resolvida por WhatsApp e por videochamada, principalmente na etapa inicial. Se for preciso um documento físico ou uma reunião presencial, combinamos o melhor horário pra você.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto custa conversar e entender meu caso?<span class="plus"></span></summary>
+        <p>A primeira conversa é gratuita. Você me conta o que está acontecendo, eu avalio sua situação e só depois falamos sobre valores — sem pressão e sem letras miúdas.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Trabalhei informalmente ou em outra cidade. Ainda posso ter direito?<span class="plus"></span></summary>
+        <p>Pode sim. Existem formas de comprovar tempo de trabalho mesmo sem carteira assinada ou com registros antigos e espalhados. Isso é parte do que eu faço: reconstruir esse histórico para garantir o que é seu por direito.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="porque">
+  <div class="porque-watermark" aria-hidden="true"></div>
+  <div class="container">
+    <div class="porque-head reveal">
+      <p class="eyebrow">Diferenciais</p>
+      <h2>Por que escolher esse escritório</h2>
+    </div>
+    <div class="porque-grid reveal-stagger">
+      <div class="porque-card">
+        <div class="porque-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+        <h3>Agilidade no processo</h3>
+        <p>Acompanhamento constante, sem enrolação, do primeiro contato até a decisão final.</p>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon"><svg viewBox="0 0 24 24"><path d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/></svg></div>
+        <h3>Transparência total</h3>
+        <p>Você entende cada etapa do seu processo, em linguagem clara, sem termos técnicos incompreensíveis.</p>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon"><svg viewBox="0 0 24 24"><path d="M12 15a5 5 0 100-10 5 5 0 000 10z"/><path d="M8.5 14L7 21l5-2.5L17 21l-1.5-7"/></svg></div>
+        <h3>20+ anos de expertise</h3>
+        <p>Mais de 4.000 processos previdenciários conduzidos, com reconhecimento consolidado em Londrina.</p>
+      </div>
+      <div class="porque-card">
+        <div class="porque-icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Atendimento humano</h3>
+        <p>Resposta rápida pelo WhatsApp e conversa direta com o Dr. Daniel, sem intermediários.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="depoimentos">
+  <div class="container">
+    <div class="reviews-head reveal">
+      <p class="eyebrow">Avaliações verificadas</p>
+      <h2>O que dizem no Google</h2>
+    </div>
+    <div style="text-align:center;" class="reveal">
+      <div class="google-badge">
+        <svg viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20.4H24v7.2h11.3c-1.6 4.6-6 7.9-11.3 7.9-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.1-5.1C34.6 6.1 29.6 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l5.9 4.3C13.8 15.6 18.5 12.7 24 12.7c3.1 0 5.9 1.2 8 3.1l5.1-5.1C34.6 6.1 29.6 4 24 4 16.2 4 9.4 8.4 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.5 0 10.4-1.9 14-5.4l-6.5-5.4c-2 1.4-4.6 2.3-7.5 2.3-5.3 0-9.7-3.3-11.3-7.9l-6.4 4.9C9.5 39.5 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20.4H24v7.2h11.3c-.8 2.3-2.2 4.3-4.1 5.7l6.5 5.4C41.5 35.6 44 30.2 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <strong data-count="5" data-decimals="1">5.0</strong>
+        <span class="count">102 avaliações no Google</span>
+      </div>
+    </div>
+    <div class="reveal" id="featurable-container">
+      <div id="featurable-9eefd4c6-d4b1-4505-8dc4-080a6967c612" data-featurable-async data-location-code="pt-BR"></div>
+      <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <div class="cta-card reveal">
+      <div class="cta-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>
+      </div>
+      <p class="eyebrow">Fale agora pelo WhatsApp</p>
+      <h2>Conte seu caso. Vamos te ajudar.</h2>
+      <p class="sub">Me manda uma mensagem contando o que está acontecendo. Eu mesmo respondo, explico o que pode ser feito e digo se você tem direito a um benefício — sem enrolação e sem compromisso.</p>
+      <a class="btn-primary" href="https://wa.me/554384095144?text=Ol%C3%A1%2C%20Dr.%20Daniel%2C%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>
+        Contar meu caso agora
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="img/crest_only.png" alt="Daniel Brianez Advocacia">
+        <p>Advocacia especializada em Direito Previdenciário em Londrina/PR, com mais de 20 anos de experiência defendendo quem dedicou a vida ao trabalho.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Contato</h4>
+        <a href="https://wa.me/554384095144" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          (43) 8409-5144
+        </a>
+        <a href="tel:+554330640977">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.12.9.35 1.79.68 2.63a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.45-1.45a2 2 0 012.11-.45c.84.33 1.73.56 2.63.68A2 2 0 0122 16.92z"/></svg>
+          (41) 3225-1108
+        </a>
+        <a href="mailto:contato@danielbrianez.adv.br">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 4l8 8 8-8"/></svg>
+          contato@danielbrianez.adv.br
+        </a>
+      </div>
+      <div class="footer-col">
+        <h4>Endereço</h4>
+        <p>
+          <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ed. Armando Spiacci — R. Sen. Souza Naves, 683, sala 201, Centro, Londrina/PR
+        </p>
+        <div class="footer-map">
+          <iframe src="https://www.google.com/maps?q=-23.318402,-51.157386&z=16&output=embed" loading="lazy" title="Localização do escritório"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="footer-inner">
+      <p>&copy; 2026 Daniel Brianez Advocacia — Todos os direitos reservados.</p>
+      <div class="footer-social">
+        <a href="https://wa.me/554384095144" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
+        <a href="https://www.google.com/maps/place/?q=place_id:ChIJpXRVDb1D65QRGJnTomhCc6Y" target="_blank" rel="noopener" aria-label="Google"><svg viewBox="0 0 24 24"><path d="M21.35 11.1h-9.17v2.73h6.51c-.33 3.81-3.5 5.44-6.5 5.44C8.36 19.27 5 16.25 5 12s3.36-7.27 7.19-7.27c3.08 0 4.9 1.97 4.9 1.97L19 4.72S16.56 2 12.19 2C6.42 2 2.03 6.8 2.03 12c0 5.05 4.13 10 10.16 10 5.35 0 9.25-3.67 9.25-9.09 0-1.15-.09-1.81-.09-1.81z"/></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="wa-bubble" id="waBubble">
+  Conte seu caso, vamos te ajudar! 💬
+  <button type="button" onclick="document.getElementById('waBubble').style.display='none'" aria-label="Fechar">&times;</button>
+</div>
+<a class="float-wa" href="https://wa.me/554384095144?text=Ol%C3%A1%2C%20Dr.%20Daniel%2C%20gostaria%20de%20conversar%20sobre%20o%20meu%20caso." target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.36 5.1L2 22l5.06-1.33C8.5 21.5 10.2 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm5.2 14.3c-.22.62-1.28 1.18-1.77 1.24-.45.06-1.02.08-1.65-.1-.38-.11-.87-.28-1.5-.55-2.64-1.14-4.36-3.8-4.5-3.98-.13-.18-1.08-1.44-1.08-2.75 0-1.3.68-1.94.92-2.2.24-.27.53-.33.7-.33.18 0 .35 0 .5.01.16.01.38-.06.6.46.22.53.75 1.83.82 1.96.07.13.11.29.02.47-.09.18-.13.29-.26.44-.13.15-.28.34-.4.46-.13.13-.27.27-.12.53.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.42.11.58-.07.16-.18.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.27.13.44.2.5.31.07.11.07.62-.15 1.24z"/></svg>
+</a>
+
+<script>
+(function(){
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+
+  function animateCount(el){
+    var target = parseFloat(el.getAttribute('data-count'));
+    var decimals = parseInt(el.getAttribute('data-decimals') || '0', 10);
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    if(reduceMotion || isNaN(target)){
+      el.textContent = prefix + target.toLocaleString('pt-BR', {minimumFractionDigits:decimals, maximumFractionDigits:decimals}) + suffix;
+      return;
+    }
+    var duration = 1400;
+    var start = null;
+    function step(ts){
+      if(!start) start = ts;
+      var progress = Math.min((ts - start) / duration, 1);
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var value = target * eased;
+      el.textContent = prefix + value.toLocaleString('pt-BR', {minimumFractionDigits:decimals, maximumFractionDigits:decimals}) + suffix;
+      if(progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if(reduceMotion){
+    revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+    document.querySelectorAll('[data-count]').forEach(animateCount);
+    return;
+  }
+
+  var counted = new WeakSet();
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('is-visible');
+        entry.target.querySelectorAll('[data-count]').forEach(function(el){
+          if(!counted.has(el)){ counted.add(el); animateCount(el); }
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.2, rootMargin:'0px 0px -60px 0px'});
+
+  revealEls.forEach(function(el){ observer.observe(el); });
+})();
+</script>
+
+</body>
+</html>
